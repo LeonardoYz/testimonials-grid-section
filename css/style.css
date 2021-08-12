@@ -40,6 +40,7 @@ cite {
   --Light-gray: hsl(228, 4%, 70%);
   --Light-grayish-blue: hsl(210, 46%, 95%);
   --Light-grayish-blue-alt: hsla(210, 46%, 95%, 0.5);
+  --Light-grayish-blue-alt-2: hsla(210, 46%, 95%, 0.7);
   --Color-alt-paragraph: hsl(222, 5%, 58%);
 }
 
@@ -135,7 +136,7 @@ cite {
 }
 
 .testimonial blockquote p {
-  color: var(--Light-grayish-blue-alt);
+  color: var(--Light-grayish-blue-alt-2);
   font-size: 0.87rem;
   line-height: 1.4;
 }
