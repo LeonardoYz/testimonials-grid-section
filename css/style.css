@@ -1,0 +1,262 @@
+/*=== GLOBALS ==============================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 500 0.813rem 'Barlow Semi Condensed', sans-serif;
+  background: var(--Light-grayish-blue);
+  line-height: 1.33;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+cite h3 {
+  font-weight: 300;
+}
+
+section {
+  color: var(--White);
+}
+
+cite {
+  font-style: normal;
+}
+
+/*=== VARIABLES ==============================*/
+:root {
+  /* Primary */
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Neutral */
+  --Light-gray: hsl(228, 4%, 70%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+  --Light-grayish-blue-alt: hsla(210, 46%, 95%, 0.5);
+  --Color-alt-paragraph: hsl(222, 5%, 58%);
+}
+
+/*=== LAYOUT ==============================*/
+.wrapper {
+  margin: 0 1.5rem;
+}
+
+#testimonials {
+  padding: 4.438rem 0;
+}
+
+.testimonials--container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/*=== CARDS COLORS ==============================*/
+#daniel {
+  background: var(--Moderate-violet);
+}
+
+#jonathan {
+  background: var(--Very-dark-grayish-blue);
+}
+
+#jeanette,
+#kira {
+  background: var(--White);
+}
+
+#patrick {
+  background: var(--Very-dark-blackish-blue);
+}
+
+/*=== STYLES ==============================*/
+.testimonial {
+  padding: 1.5rem 2.063rem 2.125rem 1.875rem;
+  border-radius: 9px;
+  position: relative;
+  z-index: -2;
+}
+
+.testimonial .testimonial__quotation {
+  background-image: url('../assets/images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 6.5rem;
+  width: 6.625rem;
+  position: absolute;
+  top: 0;
+  right: 1.438rem;
+  z-index: -1;
+}
+
+.testimonial blockquote {
+  position: relative;
+}
+
+#daniel blockquote cite img,
+#patrick blockquote cite img {
+  border: 2px solid hsl(265, 61%, 63%);
+}
+
+.testimonial blockquote cite img {
+  border-radius: 50%;
+  width: 2rem;
+  position: absolute;
+}
+
+.testimonial blockquote cite {
+  text-indent: 3rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.testimonial blockquote cite h3 {
+  font-size: 0.813rem;
+  color: var(--Light-grayish-blue);
+}
+
+.testimonial blockquote cite h4 {
+  font-size: 0.688rem;
+  font-weight: 400;
+  color: var(--Light-grayish-blue-alt);
+  margin-bottom: 1.2rem;
+}
+
+.testimonial blockquote .title {
+  font-size: 1.26rem;
+  font-weight: 600;
+  margin-bottom: 1.375rem;
+}
+
+.testimonial blockquote p {
+  color: var(--Light-grayish-blue-alt);
+  font-size: 0.87rem;
+  line-height: 1.4;
+}
+
+#jonathan blockquote p,
+#kira blockquote p {
+  font-size: 0.83rem;
+}
+
+.color-alt blockquote cite h3,
+.color-alt blockquote .title {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.color-alt blockquote cite h4 {
+  color: var(--Light-gray);
+}
+
+.color-alt blockquote p {
+  color: var(--Color-alt-paragraph);
+}
+
+#patrick blockquote p {
+  font-size: 0.82rem;
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 0.7rem;
+}
+
+.attribution span {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  transition: 430ms;
+  border-radius: 3px;
+  padding: 0 1px;
+}
+
+.attribution a:hover {
+  background: var(--Very-dark-blackish-blue);
+  color: var(--White);
+}
+
+/*=== RESPONSIVE ==============================*/
+@media screen and (min-width: 48rem) {
+  .wrapper {
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  /* layout */
+  .wrapper {
+    max-width: 62rem;
+    margin: 0 auto;
+  }
+
+  #testimonials {
+    padding: 10.188rem 0;
+  }
+
+  .testimonials--container {
+    grid-template-columns: [start] 1fr [middle-1] 1fr [middle-2] 1fr [middle-3] 1fr [end];
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+
+  #daniel {
+    grid-column: start / middle-2;
+  }
+
+  #jeanette {
+    grid-area: 2 / start / 3 / middle-1;
+  }
+
+  #patrick {
+    grid-area: 2 / middle-1 / 3 / middle-3;
+  }
+
+  #kira {
+    grid-area: 1 / middle-3 / span 2 / end;
+  }
+
+  /* styles */
+  .testimonial .testimonial__quotation {
+    top: 0;
+    right: 5.2rem;
+  }
+
+  #jonathan blockquote p,
+  #kira blockquote p {
+    font-size: 0.84rem;
+  }
+
+  #patrick blockquote p {
+    font-size: 0.87rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  /* layout */
+  .wrapper {
+    max-width: 73.75rem;
+    margin: 0 auto;
+  }
+
+  .testimonials--container {
+    column-gap: 1.938rem;
+  }
+
+  /* styles */
+  .testimonial {
+    padding: 1.625rem 2.25rem 2.125rem 2.125rem;
+  }
+
+  .testimonial blockquote .title {
+    font-size: 1.34rem;
+  }
+}
