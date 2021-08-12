@@ -16,11 +16,11 @@ Users should be able to:
 
 ### Desktop
 
-![](../app/readme-files/challenge_screenshot.png)
+![](./readme-files/challenge_screenshot.png)
 
 ### Mobile
 
-![](../app/readme-files/challenge_screenshot-mobile.png)
+![](./readme-files/challenge_screenshot-mobile.png)
 
 #
 
